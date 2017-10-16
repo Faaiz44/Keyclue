@@ -44,8 +44,8 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView bottomNavigationView = (BottomNavigationView)
                 findViewById(R.id.bottom_navigation);
 
-//        BottomNavigationViewHelper helper = new BottomNavigationViewHelper();
-//        helper.disableShiftMode(bottomNavigationView);
+        BottomNavigationViewHelper helper = new BottomNavigationViewHelper();
+        helper.disableShiftMode(bottomNavigationView);
 
         bottomNavigationView.setOnNavigationItemSelectedListener(
                 new BottomNavigationView.OnNavigationItemSelectedListener() {
