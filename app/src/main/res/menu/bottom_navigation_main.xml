@@ -1,28 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
         android:id="@+id/action_account"
-        android:enabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:icon="@drawable/icons8_account_50"
-        app:showAsAction="ifRoom"
+        android:orientation="horizontal"
         android:title="" />
+
     <item
         android:id="@+id/action_backfilled"
-        android:enabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:icon="@drawable/icons8_back_filled_50"
-        app:showAsAction="ifRoom"
-        android:title="" />
+        android:title=""
+        android:visible="true"
+        android:orientation="horizontal"/>
+
     <item
         android:id="@+id/action_forwardfilled"
-        android:enabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:icon="@drawable/icons8_forward_filled_50"
-        app:showAsAction="ifRoom"
+        android:orientation="horizontal"
         android:title="" />
     <item
         android:id="@+id/action_shoppingcart"
-        android:enabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:icon="@drawable/icons8_shopping_cart_50"
-        app:showAsAction="ifRoom"
+        android:orientation="horizontal"
         android:title="" />
+
 </menu>
