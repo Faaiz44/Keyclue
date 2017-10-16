@@ -17,7 +17,7 @@
         android:layout_height="56dp"
         android:layout_alignParentBottom="true"
         app:itemBackground="@color/white"
-        android:alpha="0.70"
+        android:alpha="0.75"
         app:menu="@menu/bottom_navigation_main"
         app:itemIconTint="@color/black"
     app:itemTextColor="@color/black"/>
