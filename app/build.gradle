@@ -1,6 +1,6 @@
 apply plugin: 'com.android.application'
-
-
+apply plugin: 'com.google.firebase.firebase-perf'
+check.dependsOn 'assembleDebugAndroidTest'
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.0"
@@ -20,6 +20,13 @@ android {
     }
 }
 
+android.applicationVariants.all {
+    // Set this to false to disable Firebase Performance Monitoring at compile time
+    FirebasePerformance {
+        instrumentationEnabled true
+    }
+}
+
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
@@ -30,6 +37,10 @@ dependencies {
     compile 'com.android.support:design:26.0.0'
     compile 'com.google.firebase:firebase-core:11.4.2'
     compile 'com.google.firebase:firebase-messaging:11.4.2'
+    compile 'com.google.firebase:firebase-analytics:11.4.2'
+    compile 'com.google.firebase:firebase-crash:11.4.2'
+    compile 'com.google.firebase:firebase-perf:11.4.2'
+    compile 'com.google.firebase:firebase-config:11.4.2'
     testCompile 'junit:junit:4.12'
 
 }
