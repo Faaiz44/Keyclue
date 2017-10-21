@@ -1,5 +1,7 @@
 package com.keyclue.android;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
@@ -53,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.action_account:
+//                                Uri uri = Uri.parse("http://keyclue.co.kr/myshop/index.html"); // missing 'http://' will cause crashed
+//                                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+//                                startActivity(intent);
+                                wv.loadUrl("http://keyclue.co.kr/myshop/index.html");
 
                                 break;
                             case R.id.action_backfilled:
@@ -62,7 +68,10 @@ public class MainActivity extends AppCompatActivity {
 
                                 break;
                             case R.id.action_shoppingcart:
-
+//                                Uri uricart = Uri.parse("http://keyclue.co.kr/order/basket.html"); // missing 'http://' will cause crashed
+//                                Intent intentcart = new Intent(Intent.ACTION_VIEW, uricart);
+//                                startActivity(intentcart);
+                                wv.loadUrl("http://keyclue.co.kr/order/basket.html");
                                 break;
                         }
                         return false;
