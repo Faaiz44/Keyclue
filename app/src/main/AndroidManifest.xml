@@ -15,6 +15,26 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
+
+            <!-- [START link_intent_filter] -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <data
+                    android:host="m.keyclue.co.kr"
+                    android:scheme="http"/>
+                <data
+                    android:host="m.keyclue.co.kr"
+                    android:scheme="https"/>
+                <data
+                    android:host="keyclue.co.kr"
+                    android:scheme="http"/>
+                <data
+                    android:host="keyclue.co.kr"
+                    android:scheme="https"/>
+            </intent-filter>
+            <!-- [END link_intent_filter] -->
         </activity>
         <activity android:name="com.keyclue.android.SplashScreen">
             <intent-filter>
